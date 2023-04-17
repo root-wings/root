@@ -31,7 +31,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run builds
         run: |
-          echo  The tags are ${{ inputs.tags }}
+          echo  The tags are ${{ github.ref }}
           exit(0)
 
 
