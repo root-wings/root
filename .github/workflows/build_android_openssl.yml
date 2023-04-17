@@ -32,7 +32,7 @@ jobs:
       - name: Run builds
         run: |
          echo "Tag name from GITHUB_REF_NAME: $GITHUB_REF_NAME"
-         echo "Tag name from github.ref_name: ${{  github.ref_name }}"
+         echo "Tag name from github.ref_name: ${{github.ref_name}}"
           exit(0)
 
 
@@ -42,6 +42,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: "$GITHUB_REF_NAME"
+          tag_name: "${{github.ref_name}}"
           files: |
-            xx.7z
+            ${{github.ref_name}}_armeabi-v7a.7z
+            ${{github.ref_name}}_arm64-v8a.7z
+            ${{github.ref_name}}_x86.7z
+            ${{github.ref_name}}_x86-64.7z
+            
