@@ -1,5 +1,9 @@
 current_path=$pwd
+$OUTPUT_PATH=$current_path/arm64-v8a
+mkdir -p $OUTPUT_PATH
 
+exit(0)
+GCC_VERSION=4.9
 sudo apt -yqq update && sudo apt install -yqq aria2 
 aria2c https://dl.google.com/android/repository/android-ndk-r20b-linux-x86_64.zip
 unzip android-ndk-r20b-linux-x86_64.zip
