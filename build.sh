@@ -1,5 +1,5 @@
-#!/bin/bash -e
-current_path=$pwd
+#!/bin/bash 
+current_path=$PWD
 $OUTPUT_PATH=$current_path/arm64-v8a
 mkdir -p $OUTPUT_PATH
 
