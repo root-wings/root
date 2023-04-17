@@ -31,7 +31,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run builds
         run: |
-          echo  The tags are ${{ github.ref }}
+         echo "Tag name from GITHUB_REF_NAME: $GITHUB_REF_NAME"
+         echo "Tag name from github.ref_name: ${{  github.ref_name }}"
           exit(0)
 
 
