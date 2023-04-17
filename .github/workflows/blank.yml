@@ -51,7 +51,7 @@ jobs:
       - name: Generate release tag
         id: tag
         run: |
-          tar -zcvf OpenSSL_${{env.OPENSSL_VERSION}}_${{env.ANDROID_ABI}}.tar.gz /home/runner/work/root/root/openssl_3.1.0_arm64-v8a
+          tar -zcvf OpenSSL_${{env.OPENSSL_VERSION}}_${{env.ANDROID_ABI}}.tar.gz /home/runner/work/root/root/openssl_3.1.0_arm64-v8a/
           echo "::set-output name=release_tag::${{env.OPENSSL_VERSION}}"
           echo "::set-output name=status::success"
       
