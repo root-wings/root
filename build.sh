@@ -1,11 +1,10 @@
-$current_path = $pwd
+$current_path=$pwd
 
 sudo apt -yqq update && sudo apt install -yqq aria2 
 aria2c https://dl.google.com/android/repository/android-ndk-r20b-linux-x86_64.zip
 unzip android-ndk-r20b-linux-x86_64.zip
 aria2c https://www.openssl.org/source/openssl-3.1.0.tar.gz
-tar -zxvf openssl-3.1.0.tar.gz
-
+tar -zxf openssl-3.1.0.tar.gz
 
 echo "start build....."
 export ANDROID_NDK_ROOT=$pwd/android-ndk-r20b-linux-x86_64
