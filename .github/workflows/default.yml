@@ -45,4 +45,3 @@ jobs:
         with:
           files: |
             Release.txt
-            LICENSE
