@@ -24,20 +24,26 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      
+      - name: run single
+        run :
+          echo -e 'file_name="test_name_xxxx"' >> ~/.bashrc
 
+             
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          echo "test_name_xxxx" >file_name
-          $FILE_NAME="test_name_xxxx"
+          source ~/.bashrc
+          echo $file_name
+          
+         
           
       - name: Release
         uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
         with:
           tag_name: ${{FILE_NAME}}
           files: |
