@@ -1,6 +1,7 @@
 #!/bin/bash
 GCC_VERSION=4.9
 current_path=$PWD
+sudo apt install p7zip-full
 sudo apt -yqq update && sudo apt install -yqq aria2 
 aria2c https://dl.google.com/android/repository/android-ndk-r22b-linux-x86_64.zip
 unzip android-ndk-r22b-linux-x86_64.zip >/dev/null 2>&1
@@ -23,4 +24,17 @@ mkdir -p $output_path
 make && make install
 
 cd $current_path
-tar -zcf OpenSSL_3.1.0_arm64-v8a.tar.gz $output_path
+
+function clear_files {
+    rm -rf $output_path/bin
+    rm -rf $output_path/share
+    rm -rf $output_path/lib/engines*
+    rm -rf $output_path/lib/pkgconfig
+    rm -rf $output_path/lib/ossl-modules
+    rm -rf $output_path/ssl
+    echo "Build completed!"
+}
+clear_files
+
+file_name=OpenSSL_3.1.0_arm64-v8a.7z
+7z a $file_name $output_path
