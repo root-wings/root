@@ -1,6 +1,6 @@
 #!/bin/bash 
 current_path=$PWD
-$OUTPUT_PATH=$current_path/arm64-v8a
+OUTPUT_PATH=$current_path/arm64-v8a
 mkdir -p $OUTPUT_PATH
 
 exit(0)
