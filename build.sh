@@ -19,7 +19,7 @@ cd openssl-3.1.0
 output_path=$current_path/arm64-v8a
 mkdir -p $output_path
 
-./Configure android-arm64 -D__ANDROID_API__=21 -static no-shared no-tests --prefix=$output_path
+./Configure android-arm64 -D__ANDROID_API__=21 -static  -fPIC no-shared no-tests --prefix=$output_path
 
 make && make install
 
