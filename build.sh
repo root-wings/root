@@ -1,3 +1,4 @@
+#!/bin/bash
 current_path=$pwd
 $OUTPUT_PATH=$current_path/arm64-v8a
 mkdir -p $OUTPUT_PATH
