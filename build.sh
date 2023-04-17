@@ -22,7 +22,7 @@ mkdir -p $output_path
 
 
 $current_path/openssl-3.1.0/Configure android-arm -D__ANDROID_API__=21 -static -fPIC no-shared no-tests --prefix=$output_path
-
+make clean
 make && make install
 
 cd $current_path
@@ -65,7 +65,7 @@ mkdir -p $output_path
 
 
 $current_path/openssl-3.1.0/Configure android-arm64 -D__ANDROID_API__=21 -static -fPIC no-shared no-tests --prefix=$output_path
-
+make clean
 make && make install
 
 cd $current_path
@@ -108,7 +108,7 @@ mkdir -p $output_path
 
 
 $current_path/openssl-3.1.0/Configure android-x86 -D__ANDROID_API__=21 -static -fPIC no-shared no-tests --prefix=$output_path
-
+make clean
 make && make install
 
 cd $current_path
@@ -151,7 +151,7 @@ mkdir -p $output_path
 
 
 $current_path/openssl-3.1.0/Configure android-x86_64 -D__ANDROID_API__=21 -static -fPIC no-shared no-tests --prefix=$output_path
-
+make clean
 make && make install
 
 cd $current_path
