@@ -36,7 +36,7 @@ jobs:
         run: |
           pwd
           chmod +x build.sh
-          ./build.sh
+          bash build.sh
 
       - name: Release
         uses: softprops/action-gh-release@v1
