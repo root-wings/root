@@ -6,6 +6,7 @@ unzip android-ndk-r20b-linux-x86_64.zip
 aria2c https://www.openssl.org/source/openssl-3.1.0.tar.gz
 tar -zxf openssl-3.1.0.tar.gz
 
+
 echo "start build....."
 export ANDROID_NDK_ROOT=$pwd/android-ndk-r20b-linux-x86_64
 
@@ -16,9 +17,9 @@ cd openssl-3.1.0
 $OUTPUT_PATH=$current_path/arm64-v8a
 mkdir -p $OUTPUT_PATH
 
-./Configure android-arm64 -D__ANDROID_API__=$21 -static no-shared no-tests --prefix=$OUTPUT_PATH
+./Configure android-arm64 -D__ANDROID_API__=21 -static no-shared no-tests --prefix=$OUTPUT_PATH
 
 make && make install
 
 cd $current_path
-tar -zcvf OpenSSL_3.1.0_arm64-v8a.tar.gz openssl_3.1.0_arm64-v8a
+tar -zcvf OpenSSL_3.1.0_arm64-v8a.tar.gz $OUTPUT_PATH
