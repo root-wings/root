@@ -17,12 +17,12 @@ export ANDROID_NDK_ROOT=$PWD/android-ndk-r22b
 
 PATH=$ANDROID_NDK_ROOT/toolchains/llvm/prebuilt/linux-x86_64/bin:$ANDROID_NDK_ROOT/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin:$ANDROID_NDK_ROOT/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin:$PATH
 
+
+make clean
 output_path=$current_path/armeabi-v7a
 mkdir -p $output_path
 
-
 $current_path/openssl-3.1.0/Configure android-arm -D__ANDROID_API__=21 -static -fPIC no-shared no-tests --prefix=$output_path
-make clean
 make && make install
 
 cd $current_path
@@ -60,12 +60,12 @@ export ANDROID_NDK_ROOT=$PWD/android-ndk-r22b
 
 PATH=$ANDROID_NDK_ROOT/toolchains/llvm/prebuilt/linux-x86_64/bin:$ANDROID_NDK_ROOT/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin:$ANDROID_NDK_ROOT/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin:$PATH
 
+
+make clean
 output_path=$current_path/arm64-v8a
 mkdir -p $output_path
 
-
 $current_path/openssl-3.1.0/Configure android-arm64 -D__ANDROID_API__=21 -static -fPIC no-shared no-tests --prefix=$output_path
-make clean
 make && make install
 
 cd $current_path
@@ -103,12 +103,12 @@ export ANDROID_NDK_ROOT=$PWD/android-ndk-r22b
 
 PATH=$ANDROID_NDK_ROOT/toolchains/llvm/prebuilt/linux-x86_64/bin:$ANDROID_NDK_ROOT/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin:$ANDROID_NDK_ROOT/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin:$PATH
 
+
+make clean
 output_path=$current_path/x86
 mkdir -p $output_path
 
-
 $current_path/openssl-3.1.0/Configure android-x86 -D__ANDROID_API__=21 -static -fPIC no-shared no-tests --prefix=$output_path
-make clean
 make && make install
 
 cd $current_path
@@ -146,12 +146,12 @@ export ANDROID_NDK_ROOT=$PWD/android-ndk-r22b
 
 PATH=$ANDROID_NDK_ROOT/toolchains/llvm/prebuilt/linux-x86_64/bin:$ANDROID_NDK_ROOT/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin:$ANDROID_NDK_ROOT/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin:$PATH
 
+
+make clean
 output_path=$current_path/x86-64
 mkdir -p $output_path
 
-
 $current_path/openssl-3.1.0/Configure android-x86_64 -D__ANDROID_API__=21 -static -fPIC no-shared no-tests --prefix=$output_path
-make clean
 make && make install
 
 cd $current_path
