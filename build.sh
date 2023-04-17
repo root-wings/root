@@ -1,4 +1,4 @@
-$current_path=$pwd
+current_path=$pwd
 
 sudo apt -yqq update && sudo apt install -yqq aria2 
 aria2c https://dl.google.com/android/repository/android-ndk-r20b-linux-x86_64.zip
