@@ -34,9 +34,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo $xxx
-          
-          exit(0)
+
           chmod +x build.sh
           bash build.sh
 
@@ -45,6 +43,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ""
+          tag_name: "OpenSSL_3.1.0"
           files: |
             OpenSSL_3.1.0_arm64-v8a.tar.gz
