@@ -35,6 +35,8 @@ jobs:
       - name: Run a multi-line script
         run: |
           pwd
+          chmod +x run_config.sh
+          echo ${{yeki}}
           cat Release.txt
       - name: Release
         uses: softprops/action-gh-release@v1
