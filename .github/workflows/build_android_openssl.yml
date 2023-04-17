@@ -31,9 +31,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run builds
         run: |
-         echo "Tag name from GITHUB_REF_NAME:  ${{github.ref_name}}_armeabi-v7a.7z"
          echo "Tag name from github.ref_name: ${{github.ref_name}}"
-
+         chmod +x build.sh
+         bash build.sh
 
       - name: Release
         uses: softprops/action-gh-release@v1
