@@ -45,4 +45,4 @@ jobs:
         with:
           tag_name: "OpenSSL_3.1.0"
           files: |
-            OpenSSL_3.1.0_arm64-v8a.tar.gz
+            OpenSSL_3.1.0_arm64-v8a.7z
